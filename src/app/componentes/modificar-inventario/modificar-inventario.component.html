@@ -1,1 +1,34 @@
-<p>modificar-inventario works!</p>
+
+<div class="container">
+    <h2>Modificar Inventario</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Imagen</th>
+          <th>Descripción</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (producto of productos; track producto; let i = $index) {
+        <tr >
+          <td><img [src]="producto.imagen1" alt="Imagen del producto" width="50"></td>
+          <td>
+            <input type="text" class="descripcion" [(ngModel)]="producto.descripcion"  (change)="actualizarProducto(i, 'descripcion', producto.descripcion)">
+          </td>
+          <td>
+            <input type="number" [min]="producto.cantidad"  [(ngModel)]="producto.precio" (change)="actualizarProducto(i, 'precio', producto.precio)">
+          </td>
+          <td>
+            <input type="number" [(ngModel)]="producto.cantidad" (change)="actualizarProducto(i, 'cantidad', producto.cantidad)">
+          </td>
+          <td>
+            <button (click)="eliminarProducto(i)" class="btn btn-danger">Eliminar</button>
+          </td>
+        </tr>
+    }
+      </tbody>
+    </table>
+  </div>

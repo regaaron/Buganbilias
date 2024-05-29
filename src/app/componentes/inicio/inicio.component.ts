@@ -11,6 +11,7 @@ import { Productos } from '../../productos';
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css'
 })
+
 export class InicioComponent {
   productos !: Producto [];
   ngOnInit(){
