@@ -1,0 +1,36 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+.card{
+    margin: 10px;
+}
+
+.card img{
+    width: 310px;
+    height: 250px;
+
+}
+
+.card-social a{
+    margin-right: 10px;
+}
+
+.social-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons a {
+    color: #343a40;
+    margin: 0 15px;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+.social-icons a:hover {
+    color: #ffc107;
+}

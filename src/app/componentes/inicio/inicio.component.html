@@ -1,0 +1,48 @@
+<div class="card-grid">
+    @for (item of productos; track item; let i = $index) {
+        <div class="card">
+            
+            <div id={{i}}  class="carousel slide carousel-fade">
+            
+                <a [routerLink]="['/producto',i]">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src={{item.imagen1}} class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src={{item.imagen2}} class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src={{item.imagen3}} class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src={{item.imagen4}} class="d-block w-100" alt="...">
+                  </div>
+                </div>
+            </a>
+
+                <button class="carousel-control-prev" type="button"  [attr.data-bs-target]="'#'+ i" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" [attr.data-bs-target]="'#'+ i" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+              <a [routerLink]="['/producto',i]">
+              <div class="card-body">
+                  <div class="calif">
+                      <h3 class="card-title direccion">
+                            {{item.descripcion}}
+                        </h3>
+                      <div class="spacer"></div> <!-- Espacio para separar la dirección y la calificación -->
+                  </div>
+                  <h3 class="card-text">${{item.precio}} MXN </h3>
+              </div>
+              </a>
+            
+        </div>
+    }    
+</div>
