@@ -1,10 +1,10 @@
 <div class="container mt-4">
     <h2>Reportes de Ventas</h2>
   
-    <ul>
+    <ul class="primero">
      @for (reporte of reportes; track reporte) {
 
-         <li >
+         <li class="contenedor">
             <h3>Fecha: {{ reporte.fecha }}</h3>
             <p>Nombre del comprador: {{ reporte.nombreComprador }}</p>
             <p>Correo del comprador: {{ reporte.correoComprador }}</p>
@@ -21,7 +21,7 @@
                 }
             </ul>
         </li>
-        <hr>
+        
     }   
     </ul>
   </div>

@@ -3,3 +3,13 @@ img{
     height: 80px;
     margin: 10px;
 }
+
+.contenedor{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.primero{
+    list-style: none;
+}
