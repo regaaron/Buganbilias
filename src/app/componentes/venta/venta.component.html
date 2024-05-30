@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mt-4 mb-4" >
     <form class="">
         <div class="form-group">
             <label for="nombre">Nombre del comprador:</label>
@@ -11,6 +11,11 @@
         <div class="form-group">
             <label for="telefono">Nombre del comprador:</label>
             <input type="number" class="form-control" id="telefono" name="telefono" [(ngModel)]="telefonoComprador" required>
+        </div>
+
+        <div class="form-group">
+            <label for="direccion">direccion del comprador:</label>
+            <input type="text" class="form-control" id="direccion" name="direccion" [(ngModel)]="direccionComprador" required>
         </div>
       </form>
 

@@ -7,6 +7,7 @@ import { LoginComponent } from './componentes/login/login.component';
 import { ModificarInventarioComponent } from './componentes/modificar-inventario/modificar-inventario.component';
 import { AgregarProductoComponent } from './componentes/agregar-producto/agregar-producto.component';
 import { VentaComponent } from './componentes/venta/venta.component';
+import { PedidosComponent } from './componentes/pedidos/pedidos.component';
 
 export const routes: Routes = [
     {path: '', redirectTo: 'inicio', pathMatch: 'full'},
@@ -19,9 +20,7 @@ export const routes: Routes = [
     {path: 'agregarProductos', component: AgregarProductoComponent},
     {path: 'buscarProducto', component: InicioComponent},
     {path: 'nuevaVenta', component: VentaComponent},
-
-
-
+    {path: 'verPedidos', component: PedidosComponent},
 
 
 ];

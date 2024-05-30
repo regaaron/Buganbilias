@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Producto } from '../../prodcuto';
 import { ProductoService } from '../../producto.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-agregar-producto',
@@ -35,6 +36,13 @@ export class AgregarProductoComponent {
       precio: 0,
       cantidad: 0
     };
+    Swal.fire({
+      icon: "success",
+      text: "Producto guardado con exito!",
+      
+    });
+
+
   }
 
   onFileChange(event: any, field: string) {

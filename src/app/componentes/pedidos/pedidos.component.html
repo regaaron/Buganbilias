@@ -1,0 +1,28 @@
+<div class="container mt-4">
+    <h2>Reportes de Ventas</h2>
+  
+    <ul>
+     @for (reporte of reportes; track reporte) {
+
+         <li >
+            <h3>Fecha: {{ reporte.fecha }}</h3>
+            <p>Nombre del comprador: {{ reporte.nombreComprador }}</p>
+            <p>Correo del comprador: {{ reporte.correoComprador }}</p>
+            <p>telefono del comprador: {{ reporte.telefonoComprador }}</p>
+            <p>direccion del Comprador: {{ reporte.direccionComprador}}</p>
+            <p>Total de la venta: {{ reporte.totalVenta }}</p>
+            <ul>
+                @for (producto of reporte.productosVendidos; track producto) {
+
+                    <li >
+                        <img [src]="producto.imagen1" alt="">
+                        <span>{{ producto.descripcion }} - Precio: {{ producto.precio }} - Cantidad: {{ producto.cantidad }}</span>
+                    </li>
+                }
+            </ul>
+        </li>
+        <hr>
+    }   
+    </ul>
+  </div>
+  

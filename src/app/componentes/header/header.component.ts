@@ -42,7 +42,7 @@ export class HeaderComponent {
       case 'vendedor':
         return [
           { name: 'Generar Nueva Venta', link: 'nuevaVenta' },
-          { name: 'Ver Pedidos', link: 'verPedidos' },
+          { name: 'Ver ventas', link: 'verPedidos' },
           { name: 'buscar producto', link: 'buscarProducto'}
         ];
         case 'florista':

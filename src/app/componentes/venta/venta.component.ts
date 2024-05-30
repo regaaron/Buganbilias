@@ -17,6 +17,7 @@ export class VentaComponent {
   nombreComprador: string = '';
   correoComprador: string = '';
   telefonoComprador: string = '';
+  direccionComprador: string = '';
   constructor(public productoService: ProductoService) { }
 
   ngOnInit(): void {
@@ -69,6 +70,7 @@ export class VentaComponent {
         nombreComprador: this.nombreComprador,
         correoComprador: this.correoComprador,
         telefonoComprador: this.telefonoComprador,
+        direccionComprador: this.direccionComprador,
         totalVenta: this.calcularTotalVenta()
     };
 
