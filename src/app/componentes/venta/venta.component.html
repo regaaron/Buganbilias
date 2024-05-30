@@ -1,0 +1,76 @@
+<div class="container">
+    <form class="">
+        <div class="form-group">
+            <label for="nombre">Nombre del comprador:</label>
+            <input type="text" class="form-control" id="nombre" name="nombre"  [(ngModel)]="nombreComprador" required>
+        </div>
+        <div class="form-group">
+            <label for="correo">Nombre del comprador:</label>
+            <input type="email" class="form-control" id="email" name="correo" [(ngModel)]="correoComprador" required>
+        </div>
+        <div class="form-group">
+            <label for="telefono">Nombre del comprador:</label>
+            <input type="number" class="form-control" id="telefono" name="telefono" [(ngModel)]="telefonoComprador" required>
+        </div>
+      </form>
+
+    <h2>Generar Venta</h2>
+
+    <h3>Productos Disponibles</h3>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Imagen</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>cantidad</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (producto of productos; track producto) {
+            <tr >
+                <td><img [src]="producto.imagen1" alt="Imagen del producto" width="50"></td>
+                <td>{{ producto.descripcion }}</td>
+                <td>{{ producto.precio }}</td>
+                <td>{{producto.cantidad }}</td>
+                <td><button (click)="agregarAlCarrito(producto)" class="btn btn-primary">Agregar al carrito</button></td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+    <h3>Carrito de Compras</h3>
+
+   
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>imagen</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>cantidad</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (producto of carrito; track producto; let i= $index) {
+
+                <tr >
+                    <td><img [src]="producto.imagen1" alt="Imagen del producto" width="50"></td>
+                    <td>{{ producto.descripcion }}</td>
+                    <td>{{ producto.precio }}</td>
+                    <td>{{producto.cantidad }}</td>
+                    <td><button (click)="eliminarDelCarrito(i)" class="btn btn-danger">Eliminar</button></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <h3>Total: {{this.calcularTotalVenta()}}</h3>
+    <h2>nombre:{{nombreComprador}}</h2>
+
+     <button  (click)="realizarVenta()" class="btn btn-success" >Realizar Venta</button>
+
+
+</div>

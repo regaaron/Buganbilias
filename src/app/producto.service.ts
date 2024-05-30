@@ -18,7 +18,7 @@ export class ProductoService {
     return productos ? JSON.parse(productos) : Productos;
   }
 
-  private setProductosToLocalStorage(productos: Producto[]): void {
+  public setProductosToLocalStorage(productos: Producto[]): void {
     localStorage.setItem('productos', JSON.stringify(productos));
   }
 
@@ -53,4 +53,6 @@ export class ProductoService {
     this.setProductosToLocalStorage(productos);
     this.productosSubject.next(productos);
   }
+
+  
 }
