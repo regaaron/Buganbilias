@@ -54,7 +54,7 @@ export class HeaderComponent {
         return [
           { name: 'buscar productos', link: 'buscarProducto' },
           { name: 'Agregar productos', link: 'agregarProductos' },
-          { name: 'Modificar productos', link: 'modificarProductos' },
+          { name: 'Modificar productos', link: 'modificarInventario' },
           { name: 'Eliminar productos', link: 'eliminarProductos' },
           { name: 'realizar Pedido', link: 'realizarPedido' },
         ];

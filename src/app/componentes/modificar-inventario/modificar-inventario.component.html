@@ -19,10 +19,10 @@
             <input type="text" class="descripcion" [(ngModel)]="producto.descripcion"  (change)="actualizarProducto(i, 'descripcion', producto.descripcion)">
           </td>
           <td>
-            <input type="number" [min]="producto.cantidad"  [(ngModel)]="producto.precio" (change)="actualizarProducto(i, 'precio', producto.precio)">
+            <input type="number" [(ngModel)]="producto.precio" (change)="actualizarProducto(i, 'precio', producto.precio)">
           </td>
           <td>
-            <input type="number" [(ngModel)]="producto.cantidad" (change)="actualizarProducto(i, 'cantidad', producto.cantidad)">
+            <input type="number" [(ngModel)]="producto.cantidad" [min]="producto.cantidad" (change)="actualizarProducto(i, 'cantidad', producto.cantidad)">
           </td>
           <td>
             <button (click)="eliminarProducto(i)" class="btn btn-danger">Eliminar</button>

@@ -3,6 +3,7 @@ import { ProductoComponent } from '../producto/producto.component';
 import { RouterModule } from '@angular/router';
 import { Producto } from '../../prodcuto';
 import { Productos } from '../../productos';
+import { ProductoService } from '../../producto.service';
 
 @Component({
   selector: 'app-inicio',
@@ -14,8 +15,14 @@ import { Productos } from '../../productos';
 
 export class InicioComponent {
   productos !: Producto [];
+
+  constructor(private productoService: ProductoService){
+    
+  }
   ngOnInit(){
-    this.productos=Productos;
+    this.productoService.productos$.subscribe(productos => {
+      this.productos = productos;
+    });
   }
   
 

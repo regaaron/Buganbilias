@@ -5,6 +5,7 @@ import { ProductoComponent } from './componentes/producto/producto.component';
 import { CreadoresComponent } from './componentes/creadores/creadores.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { ModificarInventarioComponent } from './componentes/modificar-inventario/modificar-inventario.component';
+import { AgregarProductoComponent } from './componentes/agregar-producto/agregar-producto.component';
 
 export const routes: Routes = [
     {path: '', redirectTo: 'inicio', pathMatch: 'full'},
@@ -14,6 +15,8 @@ export const routes: Routes = [
     {path: 'producto/:id', component: ProductoComponent},
     {path: 'login', component: LoginComponent},
     {path: 'modificarInventario', component: ModificarInventarioComponent},
+    {path: 'agregarProductos', component: AgregarProductoComponent},
+
 
 
 ];

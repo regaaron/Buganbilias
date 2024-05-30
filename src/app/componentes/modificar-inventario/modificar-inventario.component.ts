@@ -31,4 +31,9 @@ export class ModificarInventarioComponent implements OnInit{
   eliminarProducto(index: number) {
     this.productoService.eliminarProducto(index);
   }
+
+  guardarCambios() {
+    // Aquí puedes agregar la lógica para guardar los cambios en tu lógica de negocio
+    console.log('Se han guardado los cambios');
+  }
 }
