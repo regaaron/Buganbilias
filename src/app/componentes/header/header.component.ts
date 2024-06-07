@@ -2,7 +2,7 @@ import { Component, Input, input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from '../login/login.component';
 import { UsuarioService } from '../../usuario.service';
-
+import { Router } from '@angular/router'; // Importa el Router
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -21,7 +21,7 @@ export class HeaderComponent {
     this.usuario = usuario;
   }
 
-  constructor(private userService: UsuarioService) {
+  constructor(private userService: UsuarioService,public router: Router) {
     this.userService.currentUser.subscribe(user => {
       this.usuario = user;
     });
@@ -55,7 +55,6 @@ export class HeaderComponent {
           { name: 'buscar productos', link: 'buscarProducto' },
           { name: 'Agregar productos', link: 'agregarProductos' },
           { name: 'Modificar productos', link: 'modificarInventario' },
-          { name: 'Eliminar productos', link: 'eliminarProductos' },
           { name: 'realizar Pedido', link: 'realizarPedido' },
         ];
 
@@ -91,6 +90,7 @@ export class HeaderComponent {
 
   salir(){
     this.userService.clearUser();
+    this.router.navigate(['/inicio']);
   }
 
 
