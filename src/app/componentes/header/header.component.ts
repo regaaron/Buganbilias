@@ -60,18 +60,21 @@ export class HeaderComponent {
 
         case 'proveedor':
         return [
+          { name: 'Inicio', link: 'buscarProducto' },
           { name: 'verOrdenCompra', link: 'verOrdenCompra' },
           { name: 'verPagos', link: 'verPagos' },
           
         ];
         case 'delivery':
           return [
+            { name: 'Inicio', link: 'buscarProducto' },
             { name: 'verPedidos', link: 'verPedidos' },
             { name: 'verRutas', link: 'verRutas' },
 
           ];
           case 'contador':
             return [
+              { name: 'Inicio', link: 'buscarProducto' },
               { name: 'verIngresos', link: 'verIngresos' },
               { name: 'verGastos', link: 'verGastos' },
               { name: 'verBalance', link: 'verBalance' },
