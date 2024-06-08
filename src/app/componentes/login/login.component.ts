@@ -17,20 +17,20 @@ export class LoginComponent {
   password: string = '';
 
   users = [
-    { username: 'admin', password: 'admin', message: 'Bienvenido admin' },
-    { username: 'vendedor', password: 'vendedor', message: 'Bienvenido vendedor' },
-    { username: 'florista', password: 'florista', message: 'Bienvenido florista' },
-    { username: 'almacenista', password: 'almacenista', message: 'Bienvenido almacenista' },
-    { username: 'proveedor', password: 'proveedor', message: 'Bienvenido proveedor' },
-    { username: 'delivery', password: 'delivery', message: 'Bienvenido delivery' },
-    { username: 'contador', password: 'contador', message: 'Bienvenido contador' }
+    { username: 'admin', password: 'ContraAdmin', message: 'Bienvenido admin' },
+    { username: 'vendedor', password: 'ContraAdmin', message: 'Bienvenido vendedor' },
+    { username: 'florista', password: 'ContraAdmin', message: 'Bienvenido florista' },
+    { username: 'almacenista', password: 'ContraAdmin', message: 'Bienvenido almacenista' },
+    { username: 'proveedor', password: 'ContraAdmin', message: 'Bienvenido proveedor' },
+    { username: 'delivery', password: 'ContraAdmin', message: 'Bienvenido delivery' },
+    // { username: 'contador', password: 'contador', message: 'Bienvenido contador' }
 
 
     // Puedes agregar más usuarios aquí
   ];
 
   constructor(private router: Router, private userService: UsuarioService){
-
+    Swal.fire("La contraseña para todos los usuarios es ContraAdmin para pruebas!");
   }
 
   login(){
